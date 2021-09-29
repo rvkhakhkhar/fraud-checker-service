@@ -53,7 +53,7 @@ data "template_file" "task_definition" {
 }
 
 resource "aws_cloudwatch_log_group" "main" {
-  name              = local.service_name
+  name              = "ravi-${local.service_name}"
   retention_in_days = 7
 
   tags = merge(

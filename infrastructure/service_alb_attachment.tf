@@ -8,7 +8,7 @@ data "aws_lb_listener" "alb_port_443_listener" {
 }
 
 resource "aws_lb_target_group" "service_tg" {
-  name     = "REPLACE-USERNAME-${local.service_name}-tg"
+  name     = "ravi-${local.service_name}-tg"
   port     = "8080"
   protocol = "HTTP"
   vpc_id   = local.vpc_id
@@ -46,7 +46,7 @@ resource "aws_lb_listener_rule" "forward_to_service" {
 
   condition {
     host_header {
-      values = ["REPLACE-USERNAME.api.bootcamp2021.online"]
+      values = ["ravi.api.bootcamp2021.online"]
     }
   }
 

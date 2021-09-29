@@ -3,6 +3,7 @@
 ### Pre-requisite
 - Ensure to have Java 11 on your machine
 
+
 - Before provisioning any code with Jenkinsfile, update all your files to prevent name-space conflict, 
 since all resources will be provisioned in a shared AWS account
 ```bash
